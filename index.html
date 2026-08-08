@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NavApron — Free Taxi Charts & Ground Navigation for MSFS</title>
+  <meta name="description" content="NavApron is a free desktop companion for Microsoft Flight Simulator. Interactive taxi charts, pathfinding, live aircraft tracking, SIDs & STARs — all in a second-monitor friendly window.">
+  <meta name="theme-color" content="#0a1628">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="NavApron" class="logo-img">
+      </a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#testimonials">Pilots say</a>
+        <a href="#changelog">Changelog</a>
+        <a href="#feedback">Feedback</a>
+        <a href="#download" class="btn btn-sm btn-primary">Download</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">Free • Windows • MSFS</div>
+        <h1>Your second-screen<br>taxi chart companion</h1>
+        <p class="hero-lead">
+          Interactive charts for taxi, departure and arrival procedures on a single map.
+          Plan clearances, follow live aircraft position, and keep everything on a second monitor.
+        </p>
+        <div class="hero-actions">
+          <a href="https://flightsim.to/addon/112971/navapron-1" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+            Download on flightsim.to
+          </a>
+          <a href="#features" class="btn btn-ghost btn-lg">See features</a>
+        </div>
+        <p class="hero-note">100% free • No ads • Local cache for speed</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Built for the ground phase</h2>
+          <p>Everything you need from pushback to takeoff — and from landing to the gate.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🗺️</div>
+            <h3>Interactive taxi charts</h3>
+            <p>Taxiways, runways, aprons and gates from OpenStreetMap. Clear, high-contrast charts you can zoom and pan.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3>Airport search</h3>
+            <p>Search by ICAO, IATA, name or city and jump straight to the chart you need.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🛤️</div>
+            <h3>Taxi clearance builder</h3>
+            <p>Build your clearance and get best-route pathfinding to the runway.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🛬</div>
+            <h3>Taxi-in after landing</h3>
+            <p>Early exits and direction-aware routing from the runway back to the gate.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📡</div>
+            <h3>SIDs & STARs</h3>
+            <p>Departure SIDs and Arrival STARs displayed on the same interactive chart.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">✈️</div>
+            <h3>Live MSFS integration</h3>
+            <p>SimConnect puts your aircraft on the map in real time. Follow mode keeps you centred.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Local cache</h3>
+            <p>Airports you’ve opened load faster next time — perfect for home base and regular hubs.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🖥️</div>
+            <h3>Second-monitor friendly</h3>
+            <p>Runs in its own Windows window. Keep the sim full-screen and the chart on a second display.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>How it works</h2>
+          <p>Three steps from download to taxi clearance.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Download & launch</h3>
+            <p>Grab the free Windows app from flightsim.to. No installer drama — just run it alongside MSFS.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Search your airport</h3>
+            <p>Type the ICAO or name. The interactive chart appears with taxiways, runways, aprons and gates ready to explore.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Build route & fly</h3>
+            <p>Use the clearance builder or pathfinding. Your aircraft shows live on the map via SimConnect. Follow mode keeps you centred.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What pilots are saying</h2>
+          <p>Early feedback from the flight sim community.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <p>“Finally a clean second-screen taxi chart that actually understands the apron. Pathfinding to the runway is a game-changer at big hubs.”</p>
+            <footer>
+              <cite>— Virtual first officer, EGLL regular</cite>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>“I run it on my tablet-sized secondary monitor. Live aircraft position + early-exit suggestions after landing = no more guessing.”</p>
+            <footer>
+              <cite>— MSFS 2024 simmer</cite>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>“OpenStreetMap data is surprisingly good for taxiways. Local cache means my home base is always instant. Keep the free model please!”</p>
+            <footer>
+              <cite>— Community tester</cite>
+            </footer>
+          </blockquote>
+        </div>
+        <p class="testimonial-note">Have you used NavApron? <a href="#feedback">Share your feedback</a> — the best comments may appear here.</p>
+      </div>
+    </section>
+
+    <!-- Changelog -->
+    <section id="changelog" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Changelog</h2>
+          <p>Latest updates and improvements.</p>
+        </div>
+
+        <div class="changelog">
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="version">v0.2.1</span>
+              <time datetime="2026-08-07">Aug 7, 2026 — Current</time>
+            </div>
+            <h3>Bug fixes</h3>
+            <ul>
+              <li>Fixed SimConnect.dll</li>
+              <li>Fixed Icon on taskbar</li>
+              <li>Fixed timeout freeze bug</li>
+            </ul>
+          </article>
+
+          <article class="changelog-entry">
+            <div class="changelog-meta">
+              <span class="version">v0.2</span>
+              <time datetime="2026-08-07">Aug 7, 2026</time>
+            </div>
+            <h3>MSFS integration &amp; fixes</h3>
+            <ul>
+              <li>Added MSFS integration (shows plane on map)</li>
+              <li>Fixed taxi clear button</li>
+              <li>Fixed some issues with taxi pathing</li>
+              <li>Fixed issues with not taxi down to true end of runway</li>
+              <li>Added changelog</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+    <section id="feedback" class="section">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Send feedback</h2>
+          <p>Bug reports, feature ideas, or just a quick thank-you — every message helps shape NavApron.</p>
+        </div>
+
+        <form class="feedback-form" id="feedbackForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <label for="name">Name or callsign (optional)</label>
+            <input type="text" id="name" name="name" placeholder="e.g. VirtualPilot123">
+          </div>
+          <div class="form-row">
+            <label for="email">Email (optional, for replies)</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="type">Type</label>
+            <select id="type" name="type" required>
+              <option value="feedback">General feedback</option>
+              <option value="bug">Bug report</option>
+              <option value="feature">Feature request</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us what you think..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Send feedback</button>
+          <p class="form-note">This form uses a free Formspree endpoint. Replace <code>YOUR_FORM_ID</code> with your own (takes 30 seconds to set up).</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="section download-section">
+      <div class="container">
+        <div class="download-card">
+          <h2>Download NavApron</h2>
+          <p>Free desktop companion for Microsoft Flight Simulator.<br>Windows • Runs in its own window</p>
+          <a href="https://flightsim.to/addon/112971/navapron-1" class="btn btn-primary btn-xl" target="_blank" rel="noopener">
+            Get it on flightsim.to
+          </a>
+          <p class="download-meta">Always free • Only install from the official download</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety & Notes -->
+    <section id="safety" class="section section-alt">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Safety & notes</h2>
+        </div>
+
+        <div class="notes-block">
+          <h3>Antivirus / SmartScreen</h3>
+          <p>NavApron is free sim software and is safe to run. Some PCs show Windows SmartScreen or antivirus warnings. This is a false positive, not a virus. Only install from the official download.</p>
+          <p>If Windows blocks it: <strong>More info → Run anyway</strong>. Optional: add an exclusion for the NavApron folder after you verify the source.</p>
+        </div>
+
+        <div class="notes-block">
+          <h3>Important notes</h3>
+          <ul>
+            <li>SID/STAR tracks are approximate for sim use (not official AIP plates).</li>
+            <li>Surface data quality depends on OpenStreetMap coverage at each airport.</li>
+            <li>Live aircraft requires MSFS and NavApron on the same PC, with a flight loaded.</li>
+          </ul>
+        </div>
+
+        <div class="notes-block support-block">
+          <h3>Support the project</h3>
+          <p>If NavApron helps your flights, you can support development here:</p>
+          <a href="https://buymeacoffee.com/robair" class="btn btn-primary" target="_blank" rel="noopener">Buy me a coffee</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="NavApron" class="footer-logo-img">
+      </div>
+      <p class="footer-text">
+        Free taxi chart & ground navigation companion for Microsoft Flight Simulator.<br>
+        Not affiliated with Microsoft or Asobo Studio. For simulation use only.
+      </p>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#changelog">Changelog</a>
+        <a href="#feedback">Feedback</a>
+        <a href="https://flightsim.to/addon/112971/navapron-1" target="_blank" rel="noopener">flightsim.to</a>
+        <a href="https://buymeacoffee.com/robair" target="_blank" rel="noopener">Support</a>
+      </div>
+      <p class="footer-copy">© 2026 NavApron • RobAirYT. Built for the flight sim community.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
