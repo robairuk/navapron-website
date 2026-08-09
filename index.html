@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NavApron — Free Taxi Charts & Ground Navigation for MSFS</title>
-  <meta name="description" content="NavApron is a free desktop companion for Microsoft Flight Simulator. Interactive taxi charts, pathfinding, live aircraft tracking, SIDs & STARs — all in a second-monitor friendly window.">
+  <meta name="description" content="NavApron is a free desktop companion for Microsoft Flight Simulator. Interactive taxi charts, pathfinding, live aircraft tracking, SIDs & STARs, SimBrief import — all in a second-monitor friendly window.">
   <meta name="theme-color" content="#0a1628">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,10 +20,9 @@
       <a href="#home" class="logo">
         <img src="logo.png" alt="NavApron" class="logo-img">
       </a>
-      <nav class="nav">
+      <nav class="nav" id="mainNav">
+        <a href="#screenshots">Screenshots</a>
         <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#testimonials">Pilots say</a>
         <a href="#changelog">Changelog</a>
         <a href="#feedback">Feedback</a>
         <a href="#download" class="btn btn-sm btn-primary">Download</a>
@@ -39,19 +38,60 @@
     <section id="home" class="hero">
       <div class="hero-bg"></div>
       <div class="container hero-content">
-        <div class="hero-badge">Free • Windows • MSFS</div>
-        <h1>Your second-screen<br>taxi chart companion</h1>
+        <div class="hero-badge">Free · Windows · MSFS</div>
+        <h1>Your second-screen<br><span class="hero-accent">taxi &amp; flight plan</span><br>companion</h1>
         <p class="hero-lead">
           Interactive charts for taxi, departure and arrival procedures on a single map.
-          Plan clearances, follow live aircraft position, and keep everything on a second monitor.
+          Plan clearances, follow live aircraft position, import SimBrief, and keep everything on a second monitor.
         </p>
         <div class="hero-actions">
           <a href="https://flightsim.to/addon/112971/navapron-1" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
             Download on flightsim.to
           </a>
-          <a href="#features" class="btn btn-ghost btn-lg">See features</a>
+          <a href="#features" class="btn btn-ghost btn-lg">Explore features</a>
         </div>
-        <p class="hero-note">100% free • No ads • Local cache for speed</p>
+        <div class="hero-stats">
+          <span>100% free</span>
+          <span class="dot">·</span>
+          <span>No ads</span>
+          <span class="dot">·</span>
+          <span>Local cache</span>
+          <span class="dot">·</span>
+          <span>Second-monitor ready</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshots" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>See it in action</h2>
+          <p>Taxi, flight plan and full-journey views from the current beta.</p>
+        </div>
+
+        <div class="screenshots-grid">
+          <figure class="screenshot-card">
+            <img src="screenshot-home.png" alt="NavApron home — choose Full journey, Taxi only, Flight plan, Departure or Arrival" loading="lazy">
+            <figcaption>Home — pick Full journey or focus on taxi, SID or STAR</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img src="screenshot-taxiout.png" alt="NavApron taxi-out at Munich EDDM with clearance path" loading="lazy">
+            <figcaption>Taxi-out — Munich (EDDM) with best-route path to the runway</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img src="screenshot-taxiin.png" alt="NavApron taxi-in at Newcastle EGNT" loading="lazy">
+            <figcaption>Taxi-in — Newcastle (EGNT) early-exit routing to the stand</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img src="screenshot-flightplan.png" alt="NavApron enroute flight plan between EGNT and EDDM" loading="lazy">
+            <figcaption>Flight plan — enroute track between Newcastle and Munich</figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <img src="screenshot-sid.png" alt="NavApron departure SID NATEB 1X at Newcastle EGNT" loading="lazy">
+            <figcaption>Departure SID — NATEB 1X from Newcastle (EGNT)</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -59,58 +99,124 @@
     <section id="features" class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Built for the ground phase</h2>
-          <p>Everything you need from pushback to takeoff — and from landing to the gate.</p>
+          <h2>Everything from gate to gate</h2>
+          <p>Built for the real workflow — taxi out, fly the plan, taxi in — without switching tools.</p>
         </div>
 
-        <div class="features-grid">
-          <article class="feature-card">
-            <div class="feature-icon">🗺️</div>
-            <h3>Interactive taxi charts</h3>
-            <p>Taxiways, runways, aprons and gates from OpenStreetMap. Clear, high-contrast charts you can zoom and pan.</p>
-          </article>
+        <!-- Home & workflow -->
+        <div class="feature-group">
+          <div class="feature-group-header">
+            <span class="feature-group-icon">🏠</span>
+            <h3>Home &amp; workflow</h3>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h4>Home hub</h4>
+              <p>Choose Full journey, Taxi, Flight plan, Departure or Arrival the moment you open the app.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Full journey mode</h4>
+              <p>Taxi out → enroute plan → taxi in on one continuous map without wiping layers.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Layer chips</h4>
+              <p>Show or hide taxi-out, enroute, taxi-in, SID, STAR and aircraft with one click.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Fit chart / Fit all</h4>
+              <p>Zoom instantly to the airport or to the whole drawn journey.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Keep on top</h4>
+              <p>Pin NavApron above other windows so the chart stays visible while you fly.</p>
+            </article>
+          </div>
+        </div>
 
-          <article class="feature-card">
-            <div class="feature-icon">🔍</div>
-            <h3>Airport search</h3>
-            <p>Search by ICAO, IATA, name or city and jump straight to the chart you need.</p>
-          </article>
+        <!-- Surface / taxi -->
+        <div class="feature-group">
+          <div class="feature-group-header">
+            <span class="feature-group-icon">🗺️</span>
+            <h3>Surface / taxi</h3>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h4>Interactive taxi charts</h4>
+              <p>Taxiways, runways, aprons and gates from OpenStreetMap — clear, high-contrast and fully zoomable.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Airport search</h4>
+              <p>Jump to any airport by ICAO, IATA, name or city.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Gate &amp; stand numbers</h4>
+              <p>Stand numbers appear when you zoom in and declutter automatically when you zoom out.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Taxi clearance builder</h4>
+              <p>Build your clearance and get best-route pathfinding all the way to the true runway end.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Taxi-in after landing</h4>
+              <p>Early-exit suggestions and direction-aware routing from the runway back to the gate.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Gate-to-gate views</h4>
+              <p>Load both departure and destination airports for full surface planning on one map.</p>
+            </article>
+          </div>
+        </div>
 
-          <article class="feature-card">
-            <div class="feature-icon">🛤️</div>
-            <h3>Taxi clearance builder</h3>
-            <p>Build your clearance and get best-route pathfinding to the runway.</p>
-          </article>
+        <!-- Flight planning -->
+        <div class="feature-group">
+          <div class="feature-group-header">
+            <span class="feature-group-icon">✈️</span>
+            <h3>Flight planning</h3>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h4>Built-in enroute planner</h4>
+              <p>DCT and fixes via OurAirports navaids — plan the whole route without leaving NavApron.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Save &amp; load plans</h4>
+              <p>Keep your flight plans locally and reload them whenever you need.</p>
+            </article>
+            <article class="feature-card">
+              <h4>SimBrief Dispatch</h4>
+              <p>Open SimBrief Dispatch with departure, destination and aircraft already prefilled.</p>
+            </article>
+            <article class="feature-card">
+              <h4>SimBrief OFP import</h4>
+              <p>Import your latest OFP by username or pilot ID and draw the route straight on the map.</p>
+            </article>
+          </div>
+        </div>
 
-          <article class="feature-card">
-            <div class="feature-icon">🛬</div>
-            <h3>Taxi-in after landing</h3>
-            <p>Early exits and direction-aware routing from the runway back to the gate.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">📡</div>
-            <h3>SIDs & STARs</h3>
-            <p>Departure SIDs and Arrival STARs displayed on the same interactive chart.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">✈️</div>
-            <h3>Live MSFS integration</h3>
-            <p>SimConnect puts your aircraft on the map in real time. Follow mode keeps you centred.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h3>Local cache</h3>
-            <p>Airports you’ve opened load faster next time — perfect for home base and regular hubs.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">🖥️</div>
-            <h3>Second-monitor friendly</h3>
-            <p>Runs in its own Windows window. Keep the sim full-screen and the chart on a second display.</p>
-          </article>
+        <!-- Procedures & live sim -->
+        <div class="feature-group">
+          <div class="feature-group-header">
+            <span class="feature-group-icon">📡</span>
+            <h3>Procedures &amp; live sim</h3>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h4>SIDs &amp; STARs</h4>
+              <p>Departure SIDs and Arrival STARs displayed on the same interactive chart.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Live MSFS integration</h4>
+              <p>SimConnect puts your aircraft on the map in real time. Follow mode keeps you centred. Use aircraft location as taxi start.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Local cache</h4>
+              <p>Airports you’ve opened before load faster next time — ideal for home base and regular hubs.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Second-monitor friendly</h4>
+              <p>Runs in its own Windows window. Keep the sim full-screen and the chart on a second display.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -126,7 +232,7 @@
         <div class="steps">
           <div class="step">
             <div class="step-number">01</div>
-            <h3>Download & launch</h3>
+            <h3>Download &amp; launch</h3>
             <p>Grab the free Windows app from flightsim.to. No installer drama — just run it alongside MSFS.</p>
           </div>
           <div class="step">
@@ -136,7 +242,7 @@
           </div>
           <div class="step">
             <div class="step-number">03</div>
-            <h3>Build route & fly</h3>
+            <h3>Build route &amp; fly</h3>
             <p>Use the clearance builder or pathfinding. Your aircraft shows live on the map via SimConnect. Follow mode keeps you centred.</p>
           </div>
         </div>
@@ -144,7 +250,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="section">
+    <section id="testimonials" class="section section-alt">
       <div class="container">
         <div class="section-header">
           <h2>What pilots are saying</h2>
@@ -178,7 +284,7 @@
     </section>
 
     <!-- Changelog -->
-    <section id="changelog" class="section section-alt">
+    <section id="changelog" class="section">
       <div class="container">
         <div class="section-header">
           <h2>Changelog</h2>
@@ -188,8 +294,21 @@
         <div class="changelog">
           <article class="changelog-entry">
             <div class="changelog-meta">
+              <span class="version">v0.3</span>
+              <time datetime="2026-08">Aug 2026 — Current beta</time>
+            </div>
+            <h3>Full journey mode</h3>
+            <ul>
+              <li>Full journey planning (taxi-out + enroute + taxi-in on one map)</li>
+              <li>Dedicated Taxi only / Flight plan / Departure / Arrival modes</li>
+              <li>Improved surface charts and path visualisation</li>
+            </ul>
+          </article>
+
+          <article class="changelog-entry">
+            <div class="changelog-meta">
               <span class="version">v0.2.1</span>
-              <time datetime="2026-08-07">Aug 7, 2026 — Current</time>
+              <time datetime="2026-08-07">Aug 7, 2026</time>
             </div>
             <h3>Bug fixes</h3>
             <ul>
@@ -218,7 +337,7 @@
     </section>
 
     <!-- Feedback -->
-    <section id="feedback" class="section">
+    <section id="feedback" class="section section-alt">
       <div class="container narrow">
         <div class="section-header">
           <h2>Send feedback</h2>
@@ -257,12 +376,13 @@
     <section id="download" class="section download-section">
       <div class="container">
         <div class="download-card">
+          <div class="download-glow"></div>
           <h2>Download NavApron</h2>
-          <p>Free desktop companion for Microsoft Flight Simulator.<br>Windows • Runs in its own window</p>
+          <p>Free desktop companion for Microsoft Flight Simulator.<br>Windows · Runs in its own window</p>
           <a href="https://flightsim.to/addon/112971/navapron-1" class="btn btn-primary btn-xl" target="_blank" rel="noopener">
             Get it on flightsim.to
           </a>
-          <p class="download-meta">Always free • Only install from the official download</p>
+          <p class="download-meta">Always free · Only install from the official download</p>
         </div>
       </div>
     </section>
@@ -271,13 +391,13 @@
     <section id="safety" class="section section-alt">
       <div class="container narrow">
         <div class="section-header">
-          <h2>Safety & notes</h2>
+          <h2>Safety &amp; notes</h2>
         </div>
 
         <div class="notes-block">
           <h3>Antivirus / SmartScreen</h3>
-          <p>NavApron is free sim software and is safe to run. Some PCs show Windows SmartScreen or antivirus warnings. This is a false positive, not a virus. Only install from the official download.</p>
-          <p>If Windows blocks it: <strong>More info → Run anyway</strong>. Optional: add an exclusion for the NavApron folder after you verify the source.</p>
+          <p>NavApron is free sim software and is safe to run. Some PCs show Windows SmartScreen or antivirus warnings because the app is not yet code-signed (common for indie desktop builds). This is a false positive, not a virus.</p>
+          <p>Only install from the official download. If Windows blocks it: <strong>More info → Run anyway</strong>. Optional: add an exclusion for the NavApron folder after you verify the source.</p>
         </div>
 
         <div class="notes-block">
@@ -286,6 +406,7 @@
             <li>SID/STAR tracks are approximate for sim use (not official AIP plates).</li>
             <li>Surface data quality depends on OpenStreetMap coverage at each airport.</li>
             <li>Live aircraft requires MSFS and NavApron on the same PC, with a flight loaded.</li>
+            <li>SimBrief OFP generation happens on SimBrief’s site; NavApron imports the result.</li>
           </ul>
         </div>
 
@@ -305,17 +426,17 @@
         <img src="logo.png" alt="NavApron" class="footer-logo-img">
       </div>
       <p class="footer-text">
-        Free taxi chart & ground navigation companion for Microsoft Flight Simulator.<br>
-        Not affiliated with Microsoft or Asobo Studio. For simulation use only.
+        Free taxi chart &amp; ground navigation companion for Microsoft Flight Simulator.<br>
+        Built for second-monitor use. Always free.
       </p>
       <div class="footer-links">
+        <a href="https://flightsim.to/addon/112971/navapron-1" target="_blank" rel="noopener">Download</a>
         <a href="#features">Features</a>
         <a href="#changelog">Changelog</a>
         <a href="#feedback">Feedback</a>
-        <a href="https://flightsim.to/addon/112971/navapron-1" target="_blank" rel="noopener">flightsim.to</a>
         <a href="https://buymeacoffee.com/robair" target="_blank" rel="noopener">Support</a>
       </div>
-      <p class="footer-copy">© 2026 NavApron • RobAirYT. Built for the flight sim community.</p>
+      <p class="footer-copy">© 2026 NavApron. Not affiliated with Microsoft or Asobo.</p>
     </div>
   </footer>
 
