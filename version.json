@@ -1,6 +1,6 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "Simbrief & Airline Mode \u2014 Added Simbrief flight generation; Refined Simbrief integration; Added flight plan mode; Added airline roleplay menu; Added flight tracking; Added flight logging \u2014 \u2026",
+  "notes": "Fixed landing rate calculation error; Added Import Simbrief departure and arrival (if missing); Added Taxi re-route when MSFS connected; Added Import last OFP to main mode; Added flight plan key info screen",
   "sha256": ""
 }

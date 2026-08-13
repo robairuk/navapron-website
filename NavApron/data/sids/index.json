@@ -1,0 +1,385 @@
+{
+  "_comment": "Local SID / departure procedures for MSFS Taxi Companion. Waypoints without lat/lon resolve via navaids near the airport. Not official AIP — for sim use only.",
+  "airports": {
+    "EGNM": {
+      "name": "Leeds Bradford",
+      "sids": [
+        {
+          "id": "POL1X",
+          "name": "POL 1X",
+          "runways": ["14", "32"],
+          "type": "RNAV",
+          "description": "RNAV departure via NELSA to POL",
+          "waypoints": [
+            { "fix": "NELSA", "lat": 53.95, "lon": -1.55, "alt_ft": 4000 },
+            { "fix": "POL" }
+          ]
+        },
+        {
+          "id": "POL1Y",
+          "name": "POL 1Y",
+          "runways": ["14"],
+          "type": "RNAV",
+          "description": "RNAV departure RWY 14 via NELSA to POL",
+          "waypoints": [
+            { "fix": "NELSA", "lat": 53.95, "lon": -1.55, "alt_ft": 4000 },
+            { "fix": "POL" }
+          ]
+        },
+        {
+          "id": "DOPEK1X",
+          "name": "DOPEK 1X",
+          "runways": ["14", "32"],
+          "type": "RNAV",
+          "description": "RNAV departure via DOPEK",
+          "waypoints": [
+            { "fix": "DOPEK", "lat": 53.78, "lon": -1.45, "alt_ft": 4000 }
+          ]
+        },
+        {
+          "id": "LAMIX1X",
+          "name": "LAMIX 1X",
+          "runways": ["14", "32"],
+          "type": "RNAV",
+          "description": "RNAV departure via LAMIX",
+          "waypoints": [
+            { "fix": "LAMIX", "lat": 53.72, "lon": -1.85, "alt_ft": 4000 }
+          ]
+        }
+      ]
+    },
+    "EGNT": {
+      "name": "Newcastle",
+      "sids": [
+        {
+          "id": "GIRLI3X",
+          "name": "GIRLI 3X",
+          "runways": ["25"],
+          "type": "RNAV",
+          "description": "RNAV1 RWY 25 (standard) — early NTW02 then to GIRLI. Sim-approx track.",
+          "waypoints": [
+            { "fix": "NTW02", "lat": 55.0294, "lon": -1.7306, "alt_ft": 1100 },
+            { "fix": "NTS08", "lat": 55.0038, "lon": -1.8536, "alt_ft": 4000 },
+            { "fix": "GIRLI", "lat": 54.7114, "lon": -1.8031, "alt_ft": 5000 }
+          ]
+        },
+        {
+          "id": "GIRLI1Y",
+          "name": "GIRLI 1Y",
+          "runways": ["25"],
+          "type": "RNAV",
+          "description": "RNAV1 RWY 25 alternative (e.g. Currock Hill gliding). Sim-approx track.",
+          "waypoints": [
+            { "fix": "NTW03", "lat": 55.0209, "lon": -1.7716, "alt_ft": 1100 },
+            { "fix": "NTS08", "lat": 55.0038, "lon": -1.8536, "alt_ft": 4000 },
+            { "fix": "GIRLI", "lat": 54.7114, "lon": -1.8031, "alt_ft": 5000 }
+          ]
+        },
+        {
+          "id": "GIRLI1T",
+          "name": "GIRLI 1T",
+          "runways": ["07"],
+          "type": "RNAV",
+          "description": "RNAV1 RWY 07 via GIRLI. Sim-approx track.",
+          "waypoints": [
+            { "fix": "NTW07", "lat": 55.0465, "lon": -1.6486, "alt_ft": 770 },
+            { "fix": "GIRLI", "lat": 54.7114, "lon": -1.8031, "alt_ft": 5000 }
+          ]
+        },
+        {
+          "id": "GIRLI1X",
+          "name": "GIRLI 1X",
+          "runways": ["07", "25"],
+          "type": "RNAV",
+          "description": "Legacy/simple RNAV via GIRLI (older designator). Prefer 3X/1T/1Y when issued.",
+          "waypoints": [
+            { "fix": "GIRLI", "lat": 54.7114, "lon": -1.8031, "alt_ft": 4000 }
+          ]
+        },
+        {
+          "id": "NATEB1X",
+          "name": "NATEB 1X",
+          "runways": ["07", "25"],
+          "type": "RNAV",
+          "description": "RNAV via NATEB",
+          "waypoints": [
+            { "fix": "NATEB", "lat": 55.0383, "lon": -1.6983 }
+          ]
+        },
+        {
+          "id": "POL1X",
+          "name": "POL 1X",
+          "runways": ["07", "25"],
+          "type": "CONV",
+          "description": "Conventional / RNAV toward POL",
+          "waypoints": [
+            { "fix": "POL" }
+          ]
+        }
+      ]
+    },
+    "EIDW": {
+      "name": "Dublin",
+      "sids": [
+        {
+          "id": "ROTEV1A",
+          "name": "ROTEV 1A",
+          "runways": ["28L", "28R"],
+          "type": "RNAV",
+          "description": "RNAV departure westerly (sim-approx)",
+          "waypoints": [
+            { "fix": "DW28A", "lat": 53.435, "lon": -6.35, "alt_ft": 2000 },
+            { "fix": "ROTEV", "lat": 53.48, "lon": -6.55, "alt_ft": 5000 }
+          ]
+        },
+        {
+          "id": "LIPGO1A",
+          "name": "LIPGO 1A",
+          "runways": ["28L", "28R", "10L", "10R"],
+          "type": "RNAV",
+          "description": "RNAV departure via LIPGO (sim-approx)",
+          "waypoints": [
+            { "fix": "LIPGO", "lat": 53.55, "lon": -6.45, "alt_ft": 5000 }
+          ]
+        },
+        {
+          "id": "KERAV1A",
+          "name": "KERAV 1A",
+          "runways": ["10L", "10R"],
+          "type": "RNAV",
+          "description": "RNAV departure easterly (sim-approx)",
+          "waypoints": [
+            { "fix": "DW10A", "lat": 53.42, "lon": -6.15, "alt_ft": 2000 },
+            { "fix": "KERAV", "lat": 53.40, "lon": -5.95, "alt_ft": 5000 }
+          ]
+        },
+        {
+          "id": "BABON1A",
+          "name": "BABON 1A",
+          "runways": ["10L", "10R", "28L", "28R", "16", "34"],
+          "type": "RNAV",
+          "description": "RNAV departure via BABON (sim-approx)",
+          "waypoints": [
+            { "fix": "BABON", "lat": 53.30, "lon": -6.35, "alt_ft": 5000 }
+          ]
+        }
+      ]
+    },
+    "EGLL": {
+      "name": "London Heathrow",
+      "sids": [
+        {
+          "id": "BPK1F",
+          "name": "BPK 1F",
+          "runways": ["09L", "09R"],
+          "type": "RNAV",
+          "description": "Brookmans Park departure easterly",
+          "waypoints": [
+            { "fix": "BPK" }
+          ]
+        },
+        {
+          "id": "BPK1G",
+          "name": "BPK 1G",
+          "runways": ["27L", "27R"],
+          "type": "RNAV",
+          "description": "Brookmans Park departure westerly",
+          "waypoints": [
+            { "fix": "BPK" }
+          ]
+        },
+        {
+          "id": "CPT1F",
+          "name": "CPT 1F",
+          "runways": ["09L", "09R"],
+          "type": "RNAV",
+          "description": "Compton departure easterly",
+          "waypoints": [
+            { "fix": "CPT" }
+          ]
+        },
+        {
+          "id": "CPT1G",
+          "name": "CPT 1G",
+          "runways": ["27L", "27R"],
+          "type": "RNAV",
+          "description": "Compton departure westerly",
+          "waypoints": [
+            { "fix": "CPT" }
+          ]
+        },
+        {
+          "id": "MID1F",
+          "name": "MID 1F",
+          "runways": ["09L", "09R"],
+          "type": "RNAV",
+          "description": "Midhurst departure easterly",
+          "waypoints": [
+            { "fix": "MID" }
+          ]
+        },
+        {
+          "id": "MID1G",
+          "name": "MID 1G",
+          "runways": ["27L", "27R"],
+          "type": "RNAV",
+          "description": "Midhurst departure westerly",
+          "waypoints": [
+            { "fix": "MID" }
+          ]
+        },
+        {
+          "id": "WOBUL1F",
+          "name": "WOBUL 1F",
+          "runways": ["09L", "09R"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "WOBUL", "lat": 51.62, "lon": -0.28 }
+          ]
+        },
+        {
+          "id": "GOGSI1G",
+          "name": "GOGSI 1G",
+          "runways": ["27L", "27R"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "GOGSI", "lat": 51.45, "lon": -0.72 }
+          ]
+        }
+      ]
+    },
+    "EGGD": {
+      "name": "Bristol",
+      "sids": [
+        {
+          "id": "BADIM1X",
+          "name": "BADIM 1X",
+          "runways": ["09", "27"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "BADIM", "lat": 51.45, "lon": -2.45 }
+          ]
+        },
+        {
+          "id": "EXMOR1X",
+          "name": "EXMOR 1X",
+          "runways": ["09", "27"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "EXMOR", "lat": 51.2, "lon": -3.0 }
+          ]
+        }
+      ]
+    },
+    "EGCC": {
+      "name": "Manchester",
+      "sids": [
+        {
+          "id": "LISTO2S",
+          "name": "LISTO 2S",
+          "runways": ["05L", "05R", "23L", "23R"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "LISTO", "lat": 53.2, "lon": -2.35 }
+          ]
+        },
+        {
+          "id": "SONEX2R",
+          "name": "SONEX 2R",
+          "runways": ["05L", "05R", "23L", "23R"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "SONEX", "lat": 53.45, "lon": -2.1 }
+          ]
+        },
+        {
+          "id": "POL1R",
+          "name": "POL 1R",
+          "runways": ["05L", "05R", "23L", "23R"],
+          "type": "CONV",
+          "waypoints": [
+            { "fix": "POL" }
+          ]
+        }
+      ]
+    },
+    "EGKK": {
+      "name": "London Gatwick",
+      "sids": [
+        {
+          "id": "BOGNA1X",
+          "name": "BOGNA 1X",
+          "runways": ["08L", "08R", "26L", "26R"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "BOGNA", "lat": 50.85, "lon": -0.35 }
+          ]
+        },
+        {
+          "id": "HARDY1X",
+          "name": "HARDY 1X",
+          "runways": ["08L", "08R", "26L", "26R"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "HARDY", "lat": 51.05, "lon": 0.15 }
+          ]
+        },
+        {
+          "id": "LAM1X",
+          "name": "LAM 1X",
+          "runways": ["08L", "08R", "26L", "26R"],
+          "type": "CONV",
+          "waypoints": [
+            { "fix": "LAM" }
+          ]
+        }
+      ]
+    },
+    "EGSS": {
+      "name": "London Stansted",
+      "sids": [
+        {
+          "id": "CLN1E",
+          "name": "CLN 1E",
+          "runways": ["04", "22"],
+          "type": "CONV",
+          "waypoints": [
+            { "fix": "CLN" }
+          ]
+        },
+        {
+          "id": "DET1E",
+          "name": "DET 1E",
+          "runways": ["04", "22"],
+          "type": "CONV",
+          "waypoints": [
+            { "fix": "DET" }
+          ]
+        }
+      ]
+    },
+    "EGBB": {
+      "name": "Birmingham",
+      "sids": [
+        {
+          "id": "UMLUX1X",
+          "name": "UMLUX 1X",
+          "runways": ["15", "33"],
+          "type": "RNAV",
+          "waypoints": [
+            { "fix": "UMLUX", "lat": 52.55, "lon": -1.55 }
+          ]
+        },
+        {
+          "id": "WHI1X",
+          "name": "WHI 1X",
+          "runways": ["15", "33"],
+          "type": "CONV",
+          "waypoints": [
+            { "fix": "WHI" }
+          ]
+        }
+      ]
+    }
+  }
+}
