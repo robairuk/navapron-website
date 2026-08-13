@@ -1,6 +1,6 @@
 {
-  "version": "0.5.1",
+  "version": "0.5.2",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "Fixed landing rate calculation error; Added Import Simbrief departure and arrival (if missing); Added Taxi re-route when MSFS connected; Added Import last OFP to main mode; Added flight plan key info screen",
+  "notes": "v5 Hotfix 2 \u2014 Fixed looking for MSFS bug; Fixed SimBrief aircraft type not updated; SimBrief flight time fixed; Aircraft not snapped to nearest stand within 120m and auto selects.; Another fix pass on WebView2; Fixed altitude to be standard pressure \u2014 \u2026",
   "sha256": ""
 }
