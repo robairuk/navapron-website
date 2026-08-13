@@ -1,6 +1,6 @@
 {
-  "version": "0.5.2",
+  "version": "0.5.3",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "v5 Hotfix 2 \u2014 Fixed looking for MSFS bug; Fixed SimBrief aircraft type not updated; SimBrief flight time fixed; Aircraft not snapped to nearest stand within 120m and auto selects.; Another fix pass on WebView2; Fixed altitude to be standard pressure \u2014 \u2026",
+  "notes": "v5 Hotfix 3 \u2014 Fixed hangup on load",
   "sha256": ""
 }
