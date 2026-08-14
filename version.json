@@ -1,6 +1,6 @@
 {
-  "version": "0.6.0",
+  "version": "0.6.1",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "Fixes & Improvements \u2014 Replaced Icons & Logos (Refreshed); Fixed updater issue; Fixed SimBrief ID saving; Fixed changing flight modes resetting dropdowns; Fixed SimBrief Flight Times (Now correct format); Fixed Taxi re-routing \u2014 \u2026",
+  "notes": "v6 Hotfix \u2014 Taxiway bug hotfix",
   "sha256": ""
 }
