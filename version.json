@@ -1,6 +1,6 @@
 {
-  "version": "0.5.3",
+  "version": "0.6.0",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "v5 Hotfix 3 \u2014 Fixed hangup on load",
+  "notes": "Fixes & Improvements \u2014 Replaced Icons & Logos (Refreshed); Fixed updater issue; Fixed SimBrief ID saving; Fixed changing flight modes resetting dropdowns; Fixed SimBrief Flight Times (Now correct format); Fixed Taxi re-routing \u2014 \u2026",
   "sha256": ""
 }
