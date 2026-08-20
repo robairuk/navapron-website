@@ -298,6 +298,27 @@ ul {
   opacity: 0.4;
 }
 
+/* ===== Community stats ===== */
+.community-stats {
+  padding: 1.25rem 0;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.community-stats-text {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  min-height: 1.4em;
+}
+
+.community-stats-text:not(:empty) {
+  color: var(--cyan);
+}
+
 /* ===== Sections ===== */
 .section {
   padding: 5.5rem 0;

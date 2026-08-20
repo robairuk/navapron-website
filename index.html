@@ -62,6 +62,45 @@
       </div>
     </section>
 
+    <!-- Community stats -->
+    <section class="community-stats" id="community">
+      <div class="container">
+        <p id="navapron-community" class="community-stats-text">Community stats loading…</p>
+      </div>
+    </section>
+    <script>
+      fetch("https://navapron.com/api/stats.json")
+        .then(function (r) { return r.json(); })
+        .then(function (s) {
+          var hrs = Math.round(Number(s.airborne_hours) || 0).toLocaleString();
+          var flights = Number(s.flights_completed || 0).toLocaleString();
+          var apts =
+            s.airports_seen != null
+              ? " · " + Number(s.airports_seen).toLocaleString() + " airports"
+              : "";
+          document.getElementById("navapron-community").textContent =
+            "Community: " + hrs + " airborne hours · " + flights + " flights" + apts;
+        })
+        .catch(function () {
+          // Fallback if primary API fails on some ISPs
+          fetch("https://navapron-stats.rob321launch.workers.dev/api/stats.json")
+            .then(function (r) { return r.json(); })
+            .then(function (s) {
+              var hrs = Math.round(Number(s.airborne_hours) || 0).toLocaleString();
+              var flights = Number(s.flights_completed || 0).toLocaleString();
+              var apts =
+                s.airports_seen != null
+                  ? " · " + Number(s.airports_seen).toLocaleString() + " airports"
+                  : "";
+              document.getElementById("navapron-community").textContent =
+                "Community: " + hrs + " airborne hours · " + flights + " flights" + apts;
+            })
+            .catch(function () {
+              document.getElementById("navapron-community").textContent = "";
+            });
+        });
+    </script>
+
     <!-- Screenshots -->
     <section id="screenshots" class="section">
       <div class="container">
