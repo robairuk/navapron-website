@@ -99,6 +99,10 @@
                 <span class="bp-field-value" id="bp-hours">—</span>
               </div>
               <div class="bp-field">
+                <span class="bp-field-label">NM flown</span>
+                <span class="bp-field-value" id="bp-nm">—</span>
+              </div>
+              <div class="bp-field">
                 <span class="bp-field-label">Airports</span>
                 <span class="bp-field-value" id="bp-airports">—</span>
               </div>
@@ -116,13 +120,16 @@
         function fillStats(s) {
           var hrs = Math.round(Number(s.airborne_hours) || 0).toLocaleString();
           var flights = Number(s.flights_completed || 0).toLocaleString();
+          var nm = s.nm_flown != null ? Math.round(Number(s.nm_flown) || 0).toLocaleString() : "—";
           var apts = s.airports_seen != null ? Number(s.airports_seen).toLocaleString() : "—";
           var elF = document.getElementById("bp-flights");
           var elH = document.getElementById("bp-hours");
+          var elN = document.getElementById("bp-nm");
           var elA = document.getElementById("bp-airports");
           var elS = document.getElementById("bp-status");
           if (elF) elF.textContent = flights;
           if (elH) elH.textContent = hrs;
+          if (elN) elN.textContent = nm;
           if (elA) elA.textContent = apts;
           if (elS) elS.textContent = "LIVE";
           var pass = document.getElementById("navapron-boarding-pass");

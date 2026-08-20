@@ -487,8 +487,8 @@ ul {
 
 .bp-fields {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
   margin-bottom: 0.85rem;
 }
 
@@ -508,7 +508,7 @@ ul {
 
 .bp-field-value {
   font-family: var(--mono);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--cyan);
   letter-spacing: -0.01em;
@@ -565,8 +565,12 @@ ul {
     font-size: 1.3rem;
   }
 
+  .bp-fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .bp-field-value {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 }
 
