@@ -1,6 +1,6 @@
 {
-  "version": "0.9.6",
+  "version": "0.10.0",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "Fixes...Fixes",
+  "notes": "METAR, IVAO & Fixes",
   "sha256": ""
 }
