@@ -1,6 +1,6 @@
 {
-  "version": "0.12.2",
+  "version": "0.13.0",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "v12 Hotfix",
+  "notes": "Major taxi & waypoint changes",
   "sha256": ""
 }
