@@ -1,6 +1,6 @@
 {
-  "version": "0.13.0",
+  "version": "0.13.1",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "Major taxi & waypoint changes",
+  "notes": "Hotfix for Simbrief Entry",
   "sha256": ""
 }
