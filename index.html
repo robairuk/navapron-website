@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NavApron — Free Taxi Charts & Ground Navigation for MSFS</title>
-  <meta name="description" content="NavApron is a free desktop companion for Microsoft Flight Simulator. Gate-to-gate taxi charts, SimBrief import, SIDs/STARs, live aircraft, airline logbook and career stats — all on one second-monitor map.">
+  <meta name="description" content="NavApron is a free desktop companion for Microsoft Flight Simulator. Gate-to-gate taxi charts, SimBrief import, SIDs/STARs, live aircraft, airline logbook, OBS stream overlay and shareable flight cards — all on one second-monitor map.">
   <meta name="theme-color" content="#0a1628">
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
@@ -22,6 +22,7 @@
       </a>
       <nav class="nav" id="mainNav">
         <a href="#screenshots">Screenshots</a>
+        <a href="#streamers">Streamers</a>
         <a href="#features">Features</a>
         <a href="#testimonials">Reviews</a>
         <a href="https://discord.gg/MFw9HaqpP" target="_blank" rel="noopener">Discord</a>
@@ -41,8 +42,9 @@
         <div class="hero-badge">Free · Windows · MSFS 2020 &amp; 2024</div>
         <h1>Gate to gate.<br><span class="hero-accent">One map.</span><br>Your whole flight.</h1>
         <p class="hero-lead">
-          Taxi charts, SIDs &amp; STARs, SimBrief routes, live aircraft and a full airline logbook —
-          all on a second-monitor friendly map that stays with you from pushback to parking.
+          Taxi charts, SIDs &amp; STARs, SimBrief routes, live aircraft, airline logbook,
+          OBS stream overlay and shareable flight cards — all on a second-monitor map
+          from pushback to parking.
         </p>
         <div class="hero-actions">
           <a href="https://navapron.com/NavApron.zip" class="btn btn-primary btn-lg" download>
@@ -55,9 +57,9 @@
           <span class="dot">·</span>
           <span>100% free</span>
           <span class="dot">·</span>
-          <span>Airline logbook</span>
+          <span>OBS overlay</span>
           <span class="dot">·</span>
-          <span>Live tracking</span>
+          <span>Share cards</span>
         </div>
       </div>
     </section>
@@ -163,7 +165,7 @@
       <div class="container">
         <div class="section-header">
           <h2>See it in action</h2>
-          <p>Weather radar, VATSIM traffic, full journey planning and airline logbook.</p>
+          <p>Weather radar, VATSIM traffic, full journey planning, airline logbook — plus tools built for streamers.</p>
         </div>
 
         <div class="screenshots-grid">
@@ -191,6 +193,62 @@
             <img src="screenshot-taxiout.png" alt="NavApron taxi-out at Munich EDDM with clearance path" loading="lazy">
             <figcaption>Taxi-out — best-route pathfinding to the runway</figcaption>
           </figure>
+        </div>
+
+        <!-- Streamer / share showcase (CSS mockups — no sim screenshot required) -->
+        <div class="streamer-showcase" id="streamers">
+          <div class="section-header section-header-left">
+            <h3>Built for streamers &amp; sharing</h3>
+            <p>Put live flight data on stream, then share a branded card when you shut down.</p>
+          </div>
+          <div class="streamer-showcase-grid">
+            <div class="streamer-panel">
+              <div class="streamer-panel-label">OBS Browser Source</div>
+              <div class="obs-mock" aria-hidden="true">
+                <div class="obs-mock-bar">
+                  <span class="obs-mock-brand">NavApron</span>
+                  <span class="obs-mock-route">EGKK → LFPG · B738</span>
+                  <span class="obs-mock-cell"><em>ALT</em> FL350</span>
+                  <span class="obs-mock-cell"><em>GS</em> 442 kt</span>
+                  <span class="obs-mock-cell"><em>HDG</em> 128°</span>
+                  <span class="obs-mock-cell"><em>NEXT</em> KONAN 42 NM</span>
+                  <span class="obs-mock-cell"><em>DEST</em> 186 NM</span>
+                </div>
+              </div>
+              <p class="streamer-panel-cap">
+                Transparent bottom bar for OBS — route, altitude, groundspeed, next waypoint and SimBrief cruise/fuel. Copy the URL from the hub and paste as a Browser Source (1920×200).
+              </p>
+            </div>
+            <div class="streamer-panel">
+              <div class="streamer-panel-label">Flight share card</div>
+              <div class="share-mock" aria-hidden="true">
+                <div class="share-mock-card">
+                  <div class="share-mock-top">
+                    <img src="logo.png" alt="" class="share-mock-logo">
+                    <div>
+                      <div class="share-mock-brand">NAVAPRON</div>
+                      <div class="share-mock-airline">NVA · Your airline</div>
+                    </div>
+                  </div>
+                  <div class="share-mock-fn">NA123</div>
+                  <div class="share-mock-route">EGKK <span>→</span> LFPG</div>
+                  <div class="share-mock-date">28 Aug 2026</div>
+                  <div class="share-mock-stats">
+                    <div><em>Block</em><strong>1:42:08</strong></div>
+                    <div><em>Distance</em><strong>208 NM</strong></div>
+                    <div><em>Airborne</em><strong>1:28:40</strong></div>
+                    <div><em>Max alt</em><strong>35,000 ft</strong></div>
+                    <div><em>Max GS</em><strong>448 kt</strong></div>
+                    <div><em>Landing</em><strong>−142 fpm</strong></div>
+                  </div>
+                  <div class="share-mock-foot">Tracked with NavApron</div>
+                </div>
+              </div>
+              <p class="streamer-panel-cap">
+                End a tracked flight and export a branded PNG — save to Documents or copy for Discord. Route, times, distance, max speed and landing rate included.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -225,6 +283,36 @@
             <article class="feature-card">
               <h4>Personal logbook</h4>
               <p>Every completed flight is stored with route, distance, time and landing rate. Your history at a glance.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Shareable flight cards</h4>
+              <p>When you end a tracked flight, export a branded PNG with route, block time, distance, max speed and landing rate — ready for Discord or socials.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Streamers -->
+        <div class="feature-group">
+          <div class="feature-group-header">
+            <span class="feature-group-icon">🎥</span>
+            <h3>For streamers</h3>
+          </div>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h4>OBS stream overlay</h4>
+              <p>Transparent Browser Source HUD: DEP→DEST, altitude, GS, heading, phase, next waypoint and SimBrief cruise/fuel — live from your PC.</p>
+            </article>
+            <article class="feature-card">
+              <h4>One-click setup</h4>
+              <p>Copy the overlay URL from the NavApron hub, paste into OBS at 1920×200. Optional card layout and scale via URL flags.</p>
+            </article>
+            <article class="feature-card">
+              <h4>PC ↔ iPad sync</h4>
+              <p>Plan on the tablet, fly on the PC — airports, paths and journey steps stay in sync on your home Wi‑Fi.</p>
+            </article>
+            <article class="feature-card">
+              <h4>Second-monitor native</h4>
+              <p>Keep the chart (and the overlay data) on a side screen while MSFS owns the main display.</p>
             </article>
           </div>
         </div>
@@ -338,6 +426,10 @@
               <h4>Second-monitor native</h4>
               <p>Own Windows window. Full-screen sim on the main display, charts on the second. Exactly how it should be.</p>
             </article>
+            <article class="feature-card">
+              <h4>OBS + share cards</h4>
+              <p>Stream a live flight HUD, then post a branded flight card when you end tracking — see the Streamers section above.</p>
+            </article>
           </div>
         </div>
       </div>
@@ -364,8 +456,8 @@
           </div>
           <div class="step">
             <div class="step-number">03</div>
-            <h3>Fly &amp; log it</h3>
-            <p>Connect MSFS, start the flight, follow live. Hours, distance and landings go straight into your airline logbook.</p>
+            <h3>Fly, stream &amp; share</h3>
+            <p>Connect MSFS, track live, drop the OBS overlay on stream, then export a share card when you end the flight.</p>
           </div>
         </div>
       </div>
@@ -471,6 +563,7 @@
       </p>
       <div class="footer-links">
         <a href="https://navapron.com/NavApron.zip" download>Download</a>
+        <a href="#streamers">Streamers</a>
         <a href="#features">Features</a>
         <a href="#testimonials">Reviews</a>
         <a href="https://discord.gg/MFw9HaqpP" target="_blank" rel="noopener">Discord</a>

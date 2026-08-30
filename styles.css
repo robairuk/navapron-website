@@ -756,6 +756,228 @@ ul {
   }
 }
 
+/* ===== Streamer / share showcase ===== */
+.streamer-showcase {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.section-header-left {
+  text-align: left;
+  margin-bottom: 1.75rem;
+}
+
+.section-header-left h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.section-header-left p {
+  color: var(--text-muted);
+  max-width: 36rem;
+}
+
+.streamer-showcase-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.streamer-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.2rem 1.25rem;
+}
+
+.streamer-panel-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.85rem;
+}
+
+.streamer-panel-cap {
+  margin-top: 0.95rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.obs-mock {
+  background: linear-gradient(180deg, #1a2740 0%, #0b1220 100%);
+  border-radius: 12px;
+  padding: 2.2rem 0.75rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  min-height: 140px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.obs-mock-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.85rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(8, 12, 22, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.obs-mock-brand {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+
+.obs-mock-route {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #f8fafc;
+  white-space: nowrap;
+}
+
+.obs-mock-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #e2e8f0;
+}
+
+.obs-mock-cell em {
+  font-style: normal;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.share-mock {
+  display: flex;
+  justify-content: center;
+}
+
+.share-mock-card {
+  width: min(100%, 280px);
+  background: linear-gradient(160deg, #0b1220 0%, #111c33 45%, #0a1628 100%);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 16px;
+  padding: 1.1rem 1.15rem 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.share-mock-top {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.share-mock-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fff;
+  padding: 3px;
+}
+
+.share-mock-brand {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #7dd3fc;
+}
+
+.share-mock-airline {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.share-mock-fn {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2563eb, #0d9488);
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 0.55rem;
+}
+
+.share-mock-route {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2rem;
+}
+
+.share-mock-route span {
+  color: #38bdf8;
+  margin: 0 0.2rem;
+}
+
+.share-mock-date {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 0.85rem;
+}
+
+.share-mock-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.share-mock-stats div {
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 9px;
+  padding: 0.45rem 0.5rem;
+}
+
+.share-mock-stats em {
+  display: block;
+  font-style: normal;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.15rem;
+}
+
+.share-mock-stats strong {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #f1f5f9;
+}
+
+.share-mock-foot {
+  font-size: 0.68rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .streamer-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== Testimonials ===== */
 .testimonials-grid {
   display: grid;
