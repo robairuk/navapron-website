@@ -1272,6 +1272,16 @@ ul {
   position: relative;
 }
 
+.download-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 0.25rem 0 0.35rem;
+}
+
 .download-meta {
   position: relative;
   margin-top: 1.4rem;
