@@ -1,6 +1,6 @@
 {
-  "version": "0.15.0",
+  "version": "0.15.1",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "In-Sim EFB & Airport Changes",
+  "notes": "Fixed EFB Download",
   "sha256": ""
 }
