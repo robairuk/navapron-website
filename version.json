@@ -1,6 +1,6 @@
 {
-  "version": "0.15.1",
+  "version": "0.15.2",
   "zip_url": "https://navapron.com/NavApron.zip",
-  "notes": "Fixed EFB Download",
+  "notes": "Logging, Community Folder & Fixes",
   "sha256": ""
 }
