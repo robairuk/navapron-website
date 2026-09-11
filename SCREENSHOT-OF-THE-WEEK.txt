@@ -1,0 +1,18 @@
+Screenshot of the week
+======================
+
+To update the featured shot on navapron.com:
+
+1. Overwrite this file (same name):
+     screenshot-of-the-week.png
+
+2. Optional — edit the caption under
+     <!-- Screenshot of the week -->
+   in index.html
+
+3. Cache bust — in index.html change:
+     screenshot-of-the-week.png?v=1
+   to ?v=2 (then 3, …) after you upload, so browsers
+   pick up the new image.
+
+4. Deploy / push the site as you usually do.
