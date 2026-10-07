@@ -22,6 +22,7 @@
       </a>
       <nav class="nav" id="mainNav">
         <a href="#screenshots">Screenshots</a>
+        <a href="#leaderboard">Leaderboard</a>
         <a href="#streamers">Streamers</a>
         <a href="#features">Features</a>
         <a href="#testimonials">Reviews</a>
@@ -156,17 +157,112 @@
           var elS = document.getElementById("bp-status");
           if (elS) elS.textContent = "";
         }
+        function fillLeaderboard(rows) {
+          var body = document.getElementById("lb-body");
+          var status = document.getElementById("lb-status");
+          if (!body) return;
+          body.innerHTML = "";
+          if (!rows || !rows.length) {
+            body.innerHTML =
+              '<tr class="lb-empty"><td colspan="5">No career pilots on the board yet — settle a Pilot Career mission with community sharing on.</td></tr>';
+            if (status) status.textContent = "Waiting for pilots";
+            return;
+          }
+          rows.slice(0, 25).forEach(function (row, i) {
+            var tr = document.createElement("tr");
+            if (i === 0) tr.className = "lb-top";
+            var cash = Number(row.cash);
+            var hours = Number(row.hours != null ? row.hours : row.airborne_hours);
+            var flights = Number(row.flights || 0);
+            tr.innerHTML =
+              "<td class=\"lb-rank\">" + (i + 1) + "</td>" +
+              "<td class=\"lb-name\"></td>" +
+              "<td class=\"lb-num\">" + flights.toLocaleString() + "</td>" +
+              "<td class=\"lb-num\">" + (Number.isFinite(hours) ? hours.toLocaleString(undefined, { maximumFractionDigits: 1 }) : "—") + "</td>" +
+              "<td class=\"lb-cash\">" + (Number.isFinite(cash) ? "$" + Math.round(cash).toLocaleString() : "—") + "</td>";
+            tr.querySelector(".lb-name").textContent = String(row.name || "Pilot");
+            body.appendChild(tr);
+          });
+          if (status) status.textContent = rows.length + " pilots · sorted by cash";
+        }
+
+        function loadLeaderboard(fromStats) {
+          if (fromStats && Array.isArray(fromStats.leaderboard) && fromStats.leaderboard.length) {
+            fillLeaderboard(fromStats.leaderboard);
+            return;
+          }
+          fetch("https://navapron.com/api/stats/leaderboard.json")
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              fillLeaderboard((data && data.leaderboard) || []);
+            })
+            .catch(function () {
+              fetch("https://navapron-stats.rob321launch.workers.dev/api/stats/leaderboard.json")
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                  fillLeaderboard((data && data.leaderboard) || []);
+                })
+                .catch(function () {
+                  fillLeaderboard([]);
+                });
+            });
+        }
+
         fetch("https://navapron.com/api/stats.json")
           .then(function (r) { return r.json(); })
-          .then(fillStats)
+          .then(function (s) {
+            fillStats(s);
+            loadLeaderboard(s);
+          })
           .catch(function () {
             fetch("https://navapron-stats.rob321launch.workers.dev/api/stats.json")
               .then(function (r) { return r.json(); })
-              .then(fillStats)
-              .catch(fail);
+              .then(function (s) {
+                fillStats(s);
+                loadLeaderboard(s);
+              })
+              .catch(function () {
+                fail();
+                loadLeaderboard(null);
+              });
           });
       })();
     </script>
+
+    <!-- Pilot Career leaderboard -->
+    <section class="career-leaderboard" id="leaderboard">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pilot Career leaderboard</h2>
+          <p>
+            Ranked by cash after settled missions. Name, flights and hours update when you end a career flight
+            with community sharing enabled in NavApron Settings.
+          </p>
+        </div>
+        <div class="lb-card">
+          <div class="lb-card-head">
+            <span class="lb-kicker">LIVE · CASH HIGH SCORE</span>
+            <span class="lb-status" id="lb-status">Loading…</span>
+          </div>
+          <div class="lb-table-wrap">
+            <table class="lb-table" aria-label="Pilot Career leaderboard">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Pilot</th>
+                  <th scope="col">Flights</th>
+                  <th scope="col">Hours</th>
+                  <th scope="col">Cash</th>
+                </tr>
+              </thead>
+              <tbody id="lb-body">
+                <tr class="lb-empty"><td colspan="5">Loading leaderboard…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Screenshots -->
     <section id="screenshots" class="section">
